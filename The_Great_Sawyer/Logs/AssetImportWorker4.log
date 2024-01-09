@@ -15,7 +15,7 @@ C:/Users/ASUS/Documents/1ì¸ê°œë°œ/Project/The_Great_Sawyer/The_Great_Sawyer/The
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-55666
+56677
 Successfully changed project path to: C:/Users/ASUS/Documents/1ì¸ê°œë°œ/Project/The_Great_Sawyer/The_Great_Sawyer/The_Great_Sawyer
 C:/Users/ASUS/Documents/1ì¸ê°œë°œ/Project/The_Great_Sawyer/The_Great_Sawyer/The_Great_Sawyer
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/ASUS/Documents/1ì¸ê°œë°œ/Project/The_Great_Sawyer/The_Great_Sawyer/The
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [6700] Host "[IP] 25.34.112.108 [Port] 0 [Flags] 2 [Guid] 564104530 [EditorId] 564104530 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8PG9M6R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4840] Host "[IP] 25.34.112.108 [Port] 0 [Flags] 2 [Guid] 4117660993 [EditorId] 4117660993 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8PG9M6R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [6700] Host "[IP] 25.34.112.108 [Port] 0 [Flags] 2 [Guid] 564104530 [EditorId] 564104530 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8PG9M6R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4840] Host "[IP] 25.34.112.108 [Port] 0 [Flags] 2 [Guid] 4117660993 [EditorId] 4117660993 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-8PG9M6R) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 27.76 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 28.43 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.6f1 (b9e6e7e9fa2d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.6f1/Editor/Data/Resources/UnitySubsystems
@@ -69,45 +69,45 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56260
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56564
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.016093 seconds.
-- Loaded All Assemblies, in  0.333 seconds
+Registered in 0.016329 seconds.
+- Loaded All Assemblies, in  0.337 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.229 seconds
-Domain Reload Profiling: 559ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  0.231 seconds
+Domain Reload Profiling: 565ms
+	BeginReloadAssembly (98ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (69ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (9ms)
+	initialDomainReloadingComplete (70ms)
 	LoadAllAssembliesAndSetupDomain (125ms)
-		LoadAssemblies (90ms)
+		LoadAssemblies (94ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (116ms)
-			TypeCache.Refresh (115ms)
-				TypeCache.ScanAssembly (105ms)
+		AnalyzeDomain (115ms)
+			TypeCache.Refresh (114ms)
+				TypeCache.ScanAssembly (104ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (230ms)
+	FinalizeReload (232ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (181ms)
+		SetupLoadedEditorAssemblies (183ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
+			InitializePlatformSupportModulesInManaged (13ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (117ms)
+			ProcessInitializeOnLoadAttributes (118ms)
 			ProcessInitializeOnLoadMethodAttributes (46ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -118,8 +118,8 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\ASUS\Documents\1ì¸ê°œë°œ\Project\The_Great_Sawyer\The_Great_Sawyer\The_Great_Sawyer\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\ASUS\Documents\1ì¸ê°œë°œ\Project\The_Great_Sawyer\The_Great_Sawyer\The_Great_Sawyer\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  0.823 seconds
-Refreshing native plugins compatible for Editor in 14.62 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.806 seconds
+Refreshing native plugins compatible for Editor in 14.53 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
@@ -130,47 +130,47 @@ Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.522 seconds
-Domain Reload Profiling: 1337ms
-	BeginReloadAssembly (138ms)
+- Finished resetting the current domain, in  0.511 seconds
+Domain Reload Profiling: 1307ms
+	BeginReloadAssembly (131ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (21ms)
-	RebuildCommonClasses (29ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (30ms)
 	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (588ms)
-		LoadAssemblies (394ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (575ms)
+		LoadAssemblies (389ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (253ms)
-			TypeCache.Refresh (230ms)
-				TypeCache.ScanAssembly (216ms)
+		AnalyzeDomain (245ms)
+			TypeCache.Refresh (222ms)
+				TypeCache.ScanAssembly (211ms)
 			ScanForSourceGeneratedMonoScriptInfo (19ms)
-			ResolveRequiredComponents (3ms)
-	FinalizeReload (523ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (512ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (380ms)
+		SetupLoadedEditorAssemblies (374ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (10ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (90ms)
-			ProcessInitializeOnLoadAttributes (236ms)
-			ProcessInitializeOnLoadMethodAttributes (29ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (233ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
 			AfterProcessingInitializeOnLoad (13ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 14.10 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 14.42 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4274 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 84 unused Assets / (69.3 KB). Loaded Objects now: 4730.
-Memory consumption went from 146.4 MB to 146.3 MB.
-Total: 3.495800 ms (FindLiveObjects: 0.289500 ms CreateObjectMapping: 0.228300 ms MarkObjects: 2.843500 ms  DeleteObjects: 0.133600 ms)
+Unloading 4322 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 84 unused Assets / (69.3 KB). Loaded Objects now: 4778.
+Memory consumption went from 151.1 MB to 151.0 MB.
+Total: 3.100800 ms (FindLiveObjects: 0.278300 ms CreateObjectMapping: 0.119600 ms MarkObjects: 2.559100 ms  DeleteObjects: 0.142700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -188,164 +188,44 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 4986.648374 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Crispy/SFX_UI_Click_Organic_Crispy_Generic_1.wav
-  artifactKey: Guid(307d84975c8c7f543842e311e1a709dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Crispy/SFX_UI_Click_Organic_Crispy_Generic_1.wav using Guid(307d84975c8c7f543842e311e1a709dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11bf6ec9d74dde3de0349677c04f8e0') in 0.086594 seconds
+  Time since last request: 5822.881177 seconds.
+  path: Assets/Images/morning_cloud_1.jpg
+  artifactKey: Guid(1c62c3d4933834840aec9c6a5622d75f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/morning_cloud_1.jpg using Guid(1c62c3d4933834840aec9c6a5622d75f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07f00d599f7fbde1cbc8d975ddbc0e6a') in 0.098434 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 10.719722 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Liquid/SFX_UI_Click_Designed_Liquid_Airy_Thick_Negative_Error_1.wav
-  artifactKey: Guid(580c45279e0bb9b4fb35e5a97282e87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Liquid/SFX_UI_Click_Designed_Liquid_Airy_Thick_Negative_Error_1.wav using Guid(580c45279e0bb9b4fb35e5a97282e87f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ebc1e6e101ac7658ff59ccafd3b2590') in 0.020297 seconds
+  Time since last request: 112.170218 seconds.
+  path: Assets/Images/morning_cloud_1.png
+  artifactKey: Guid(25f0043c765d72a4eac09b840c2cf7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/morning_cloud_1.png using Guid(25f0043c765d72a4eac09b840c2cf7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd0f50016202b83c9a0c4d4ac4a770b5') in 0.023197 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Liquid/SFX_UI_Click_Designed_Liquid_Pop_Generic_1.wav
-  artifactKey: Guid(fb5c285c2df3e3c499d85185274beae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Liquid/SFX_UI_Click_Designed_Liquid_Pop_Generic_1.wav using Guid(fb5c285c2df3e3c499d85185274beae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97ca35f55c1583c73073b7eeb683d5bc') in 0.017394 seconds
+  Time since last request: 401.249175 seconds.
+  path: Assets/Images/morning_background.png
+  artifactKey: Guid(161aad9a35b08e343875a82ba8608c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/morning_background.png using Guid(161aad9a35b08e343875a82ba8608c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e107c6e677e6f0635e777338ec0d6d') in 0.044379 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Liquid/SFX_UI_Click_Designed_Liquid_Sharp_Single_Generic_1.wav
-  artifactKey: Guid(9abb3a81b78d7cb4e8e1e42cad3709ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Liquid/SFX_UI_Click_Designed_Liquid_Sharp_Single_Generic_1.wav using Guid(9abb3a81b78d7cb4e8e1e42cad3709ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76a432db07286d4830ebf95e16711381') in 0.017064 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Images/morning_cloud_2.png
+  artifactKey: Guid(407348669f387764ab35f2cb7ac43f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/morning_cloud_2.png using Guid(407348669f387764ab35f2cb7ac43f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e64ad2ad35732996f3b06fd9fe8e1c6a') in 0.039579 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 12.414690 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Metallic/SFX_UI_Click_Designed_Metallic_Dirty_Negative_1.wav
-  artifactKey: Guid(f5c5f438581b89c4b96789e177c6254a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Metallic/SFX_UI_Click_Designed_Metallic_Dirty_Negative_1.wav using Guid(f5c5f438581b89c4b96789e177c6254a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a73453f721aaaa382dbc1664f2cbc9') in 0.015324 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Metallic/SFX_UI_Click_Organic_Metallic_Thin_Select_1.wav
-  artifactKey: Guid(5aa948679296f2649802b2f562804537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Metallic/SFX_UI_Click_Organic_Metallic_Thin_Select_1.wav using Guid(5aa948679296f2649802b2f562804537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8b25287076623e803da3d712cef99ce') in 0.013943 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 13.307374 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Designed_Plastic_Metallic_Negative_Close_1.wav
-  artifactKey: Guid(75e733d88126a114e97edf7669d64482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Designed_Plastic_Metallic_Negative_Close_1.wav using Guid(75e733d88126a114e97edf7669d64482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2af1c4f2764bb7ddcaa865022fbea826') in 0.013563 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Negative_Back_1.wav
-  artifactKey: Guid(1f7c72d7f348183439f9bd7abcc2c264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Negative_Back_1.wav using Guid(1f7c72d7f348183439f9bd7abcc2c264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa81c5730e2413700849555f9c2e028') in 0.015334 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Metallic_Thin_Generic_2.wav
-  artifactKey: Guid(4dcf7646d49135146a3acdd3bbc4fb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Metallic_Thin_Generic_2.wav using Guid(4dcf7646d49135146a3acdd3bbc4fb04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '003226bdf68f5d22f09c7a98758a7aae') in 0.012905 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Wooden_Thin_Generic_1.wav
-  artifactKey: Guid(e7f15d990fdc1a841a3dee4c63f1c8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Wooden_Thin_Generic_1.wav using Guid(e7f15d990fdc1a841a3dee4c63f1c8be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec51a0d71433db04b8c8d5e1145d2d5f') in 0.013569 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Metallic_Thin_Generic_1.wav
-  artifactKey: Guid(8f7dade61c5cee742bbe8b6378ca33a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Metallic_Thin_Generic_1.wav using Guid(8f7dade61c5cee742bbe8b6378ca33a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f04d39c32c619f6ee42e007b7b1d93e4') in 0.015628 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Wooden_Thin_Open_1.wav
-  artifactKey: Guid(5e97ee9953d5c2f41869b0d55397587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Wooden_Thin_Open_1.wav using Guid(5e97ee9953d5c2f41869b0d55397587f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792275892a9bb52c845e98f84973ded7') in 0.013385 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Negative_1.wav
-  artifactKey: Guid(5acb2ed8ebe40cc4c849e5c8feafd3d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Plastic/SFX_UI_Click_Organic_Plastic_Negative_1.wav using Guid(5acb2ed8ebe40cc4c849e5c8feafd3d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ce3b4b4e335a29e0f819f296344476') in 0.012607 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 16.144001 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Designed_Pop_Generic_1.wav
-  artifactKey: Guid(9d0113dd16699ce4ea3c58dd422fdc1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Designed_Pop_Generic_1.wav using Guid(9d0113dd16699ce4ea3c58dd422fdc1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28f9c7aa400cdb690efc177010a48f76') in 0.013496 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Designed_Pop_Plastic_Crispy_Generic_1.wav
-  artifactKey: Guid(d4b4564ad8ca7254c9d41efb905858eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Designed_Pop_Plastic_Crispy_Generic_1.wav using Guid(d4b4564ad8ca7254c9d41efb905858eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80e2a31180def010cf58addd0cf06a8c') in 0.015658 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Organic_Pop_Thin_Generic_2.wav
-  artifactKey: Guid(2c27e0f020620d1439d65d3b752725de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Organic_Pop_Thin_Generic_2.wav using Guid(2c27e0f020620d1439d65d3b752725de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0bc1c12ed2170a62ee85ebb70326e4e') in 0.013614 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Designed_Pop_Open_1.wav
-  artifactKey: Guid(99001d6f0f253fd40b0c768f86436b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Pop/SFX_UI_Click_Designed_Pop_Open_1.wav using Guid(99001d6f0f253fd40b0c768f86436b29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c115d180c1930b95dfc71b89926603ad') in 0.012557 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 17.674709 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Sci-Fi/SFX_UI_Click_Designed_Scifi_Digital_Generic_1.wav
-  artifactKey: Guid(7b21b50f27a95224fa10e8f962ae17af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Sci-Fi/SFX_UI_Click_Designed_Scifi_Digital_Generic_1.wav using Guid(7b21b50f27a95224fa10e8f962ae17af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8931aa8197134b484902a6613cf0d811') in 0.016519 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Sci-Fi/SFX_UI_Click_Designed_Scifi_Thin_Select_2.wav
-  artifactKey: Guid(3eab95774fe317a489c29e1075d3d6a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Sci-Fi/SFX_UI_Click_Designed_Scifi_Thin_Select_2.wav using Guid(3eab95774fe317a489c29e1075d3d6a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12afee0a15d8dd741971ce0cb1651146') in 0.015990 seconds
+  path: Assets/Images/morning_cloud_5.png
+  artifactKey: Guid(0cb7be4365e986046b8dfb7883f13368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Images/morning_cloud_5.png using Guid(0cb7be4365e986046b8dfb7883f13368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9159a43f942bb20751cbbc34248b128') in 0.038025 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 19.219222 seconds.
-  path: Assets/Free UI Click Sound Effects Pack/AUDIO/Wooden/SFX_UI_Click_Organic_Wooden_Plastic_Negative_Back_1.wav
-  artifactKey: Guid(4e7ce19b0c9dda1458946554f940d3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Free UI Click Sound Effects Pack/AUDIO/Wooden/SFX_UI_Click_Organic_Wooden_Plastic_Negative_Back_1.wav using Guid(4e7ce19b0c9dda1458946554f940d3b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3be98af3456885c303a9b3243bf1e45c') in 0.020578 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 3
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
 AssetImportWorker is now disconnected from the server
