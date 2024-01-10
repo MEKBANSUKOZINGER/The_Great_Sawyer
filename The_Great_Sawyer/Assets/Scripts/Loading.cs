@@ -55,7 +55,7 @@ public class Loading : MonoBehaviour
         float timer = 0.0f;
         while (!op.isDone)
         {
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
             Debug.Log(progressBar.fillAmount);
             timer += Time.deltaTime;
             if (op.progress <0.9f)
@@ -72,7 +72,6 @@ public class Loading : MonoBehaviour
                 if (progressBar.fillAmount == 1.0f)
                 {
                     op.allowSceneActivation = true;
-                    yield return new WaitForSeconds(2.0f);
                     yield break;
                 }
             }
