@@ -16,6 +16,8 @@ public class SplashManager : MonoBehaviour
     public Image white;
     public Image realWhite;
 
+    public List<Image> trainContainer = new List<Image>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,10 @@ public class SplashManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && !Entered && firstAnim)
         {
             Entered = true;
+            for(int i = 0; i < trainContainer.Count; i++)
+            {
+                trainContainer[i].rectTransform.DOMoveX(trainContainer[i].rectTransform.position.x + 3000f, 1.5f).SetEase(Ease.InCirc);
+            }
             semiWhite.rectTransform.DOMoveX(-1080f, 0.75f).SetEase(Ease.InSine);
             semiWhite_2.rectTransform.DOMoveX(-1080f, 1f).SetEase(Ease.InSine);
             white.rectTransform.DOMoveX(-1080f, 1f).SetEase(Ease.InSine).SetDelay(0.5f);
