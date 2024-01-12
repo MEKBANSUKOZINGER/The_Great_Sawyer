@@ -55,7 +55,7 @@ public class Loading : MonoBehaviour
         float timer = 0.0f;
         while (!op.isDone)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return null;
             Debug.Log(progressBar.fillAmount);
             timer += Time.deltaTime;
             if (op.progress <0.9f)
