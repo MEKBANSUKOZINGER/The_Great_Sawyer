@@ -5,11 +5,14 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class SplashManager : MonoBehaviour
 {
     private bool Entered = false;
     private bool firstAnim = false;
+
+    public static SplashManager instance;
 
     public Image semiWhite;
     public Image semiWhite_2;
@@ -18,9 +21,13 @@ public class SplashManager : MonoBehaviour
 
     public List<Image> trainContainer = new List<Image>();
 
+    public float width = 1080f;
+    public float height = 1920f;
+
     // Start is called before the first frame update
     void Start()
     {
+        SetResolution();
     }
 
     // Update is called once per frame
@@ -48,5 +55,32 @@ public class SplashManager : MonoBehaviour
     private void toMain()
     {
         Loading.LoadScene("main");
+    }
+
+    public void SetResolution()
+    {
+        int setWidth = 1080;
+        int setHeight = 1920;
+
+        int deviceWidth = Screen.width;
+        int deviceHeight = Screen.height;
+        width = deviceWidth;
+        height = deviceHeight;
+
+        Screen.SetResolution(setWidth, (int)(((float)deviceHeight / deviceWidth) * setWidth), true);
+
+        if ((float)setWidth / setHeight < (float)deviceWidth / deviceHeight)
+        {
+            float newWidth = ((float)setWidth / setHeight) / ((float)deviceWidth / deviceHeight);
+            Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f);
+            width = newWidth;
+        }
+        else
+        {
+            float newHeight = ((float)deviceWidth / deviceHeight) / ((float)setWidth / setHeight);
+            Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight);
+            height = newHeight;
+        }
+
     }
 }

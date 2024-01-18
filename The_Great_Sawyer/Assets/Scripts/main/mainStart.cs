@@ -15,6 +15,7 @@ public class mainStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SplashManager.instance.SetResolution();
         white.rectTransform.DOMoveX(-1080f, 1f).SetEase(Ease.OutSine);
         realWhite.rectTransform.DOMoveX(-1620f, 1f).SetEase(Ease.OutSine);
         semiWhite.rectTransform.DOMoveX(-1080f, 0.75f).SetEase(Ease.OutSine).SetDelay(0.5f);

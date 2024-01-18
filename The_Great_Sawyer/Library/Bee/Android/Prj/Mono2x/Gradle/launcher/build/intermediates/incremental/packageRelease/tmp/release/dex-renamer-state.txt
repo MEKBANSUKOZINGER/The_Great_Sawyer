@@ -1,0 +1,4 @@
+#Thu Jan 18 17:20:35 KST 2024
+base.0=C\:\\Users\\ASUS\\Documents\\1_oneManShow\\Project\\The_Great_Sawyer\\The_Great_Sawyer\\The_Great_Sawyer\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
