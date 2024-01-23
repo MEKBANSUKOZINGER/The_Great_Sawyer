@@ -21,9 +21,6 @@ public class SplashManager : MonoBehaviour
 
     public List<Image> trainContainer = new List<Image>();
 
-    public float width = 1080f;
-    public float height = 1920f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -64,8 +61,6 @@ public class SplashManager : MonoBehaviour
 
         int deviceWidth = Screen.width;
         int deviceHeight = Screen.height;
-        width = deviceWidth;
-        height = deviceHeight;
 
         Screen.SetResolution(setWidth, (int)(((float)deviceHeight / deviceWidth) * setWidth), true);
 
@@ -73,13 +68,11 @@ public class SplashManager : MonoBehaviour
         {
             float newWidth = ((float)setWidth / setHeight) / ((float)deviceWidth / deviceHeight);
             Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f);
-            width = newWidth;
         }
         else
         {
             float newHeight = ((float)deviceWidth / deviceHeight) / ((float)setWidth / setHeight);
             Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight);
-            height = newHeight;
         }
 
     }

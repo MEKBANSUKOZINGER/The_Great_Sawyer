@@ -405,6 +405,7 @@
 "Assets/Scripts/Loading.cs"
 "Assets/Scripts/main/ChangeTime.cs"
 "Assets/Scripts/main/mainStart.cs"
+"Assets/Scripts/main/PopUp.cs"
 "Assets/Scripts/main/Toggle.cs"
 "Assets/Scripts/main/UIManager.cs"
 "Assets/Scripts/Splash/CloudMoving.cs"
