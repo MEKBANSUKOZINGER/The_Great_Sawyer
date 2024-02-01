@@ -44,3 +44,6 @@ TagManager:
   - name: Splash
     uniqueID: 790808337
     locked: 0
+  - name: Tilemap
+    uniqueID: 3213205773
+    locked: 0
