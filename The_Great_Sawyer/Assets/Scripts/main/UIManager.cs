@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class mainGeneral : MonoBehaviour
@@ -79,18 +80,23 @@ public class mainGeneral : MonoBehaviour
     public void hideUI()
     {
         if (!isHiden) { 
-            topUI.transform.DOMoveY(1400f, 0.5f).SetEase(Ease.InOutSine);
-            leftUI.transform.DOMoveX(-100f, 0.5f).SetEase(Ease.InOutSine);
-            rightUI.transform.DOMoveX(1980f, 0.5f).SetEase(Ease.InOutSine);
-            bottomUI.transform.DOMoveY(740f, 0.5f).SetEase(Ease.InOutSine);
+            topUI.transform.DOMoveY(Screen.height, 0.5f).SetEase(Ease.InOutSine);
+            leftUI.transform.DOMoveX(- Screen.width/2, 0.5f).SetEase(Ease.InOutSine);
+            rightUI.transform.DOMoveX(Screen.width * 2, 0.5f).SetEase(Ease.InOutSine);
+            bottomUI.transform.DOMoveY(-Screen.height / 2, 0.5f).SetEase(Ease.InOutSine);
             isHiden = !isHiden;
         } else
         {
-            topUI.transform.DOMoveY(960f, 0.5f).SetEase(Ease.InOutSine);
+            topUI.transform.DOMoveY(Screen.height / 2, 0.5f).SetEase(Ease.InOutSine);
             leftUI.transform.DOMoveX(40f, 0.5f).SetEase(Ease.InOutSine);
-            rightUI.transform.DOMoveX(1080f, 0.5f).SetEase(Ease.InOutSine);
-            bottomUI.transform.DOMoveY(960f, 0.5f).SetEase(Ease.InOutSine);
+            rightUI.transform.DOMoveX(Screen.width, 0.5f).SetEase(Ease.InOutSine);
+            bottomUI.transform.DOMoveY(Screen.height / 2, 0.5f).SetEase(Ease.InOutSine);
             isHiden = !isHiden;
         }
+    }
+
+    public void walk()
+    {
+        SceneManager.LoadScene("walk");
     }
 }

@@ -4,38 +4,89 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using UnityEditor.UIElements;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
+
+    public TextMeshProUGUI text;
     //Singletone
     public static DataManager Instance;
 
     private string userFilePath;
+    private string NPCFilePath;
     private string itemsFilePath;
     private string furnituresFilePath;
     private string questsFilePath;
     private string achievementsFilePath;
 
     //Classes
+    [Serializable]
+    public class QuestNPC
+    {
+        public string name;
+        public string[] giveQuestTalks;
+        public string[] beforeCompleteTalks;
+        public string[] completeQuestTalks;
+        public string[] afterCompleteTalks;
+        public int NPCID;
+        public int questID;
+
+        public QuestNPC(string _name, int _questID)
+        {
+            name = _name;
+            giveQuestTalks = new string[1];
+            beforeCompleteTalks = new string[1];
+            completeQuestTalks = new string[1];
+            afterCompleteTalks = new string[1];
+            NPCID = 0;
+            questID = _questID;
+        }
+    }
+
+    [SerializeField]
+    public class NPC
+    {
+        public string name;
+        public string[] talks;
+        public int NPCID;
+
+        public NPC(string _name)
+        {
+            name = _name;
+            talks = new string[1];
+            NPCID = 0;
+        }
+    }
+
+    [Serializable]
+    public class NPCContainer
+    {
+        public QuestNPC[] questNPCs;
+        public NPC[] NPCs;
+    }
 
     [Serializable]
     public class Item
     {
         public string name;
         public string description;
+        public int itemID;
 
         public Item()
         {
             name = "temp";
             description = "This is description";
+            itemID = 0;
         }
 
         public Item(string _name, string _description)
         {
             name = _name;
             description = _description;
+            itemID = 0;
         }
     }
 
@@ -56,6 +107,7 @@ public class DataManager : MonoBehaviour
         public int batchY;
         public int rotate;
         public string batchTilemap;
+        public int furnitureID;
 
         public Furniture()
         {
@@ -67,6 +119,7 @@ public class DataManager : MonoBehaviour
             batchY = 0;
             rotate = 0;
             batchTilemap = "tilemap";
+            furnitureID = 0;
         }
 
         public Furniture(string _name, string _description)
@@ -79,6 +132,7 @@ public class DataManager : MonoBehaviour
             batchY = 0;
             rotate = 0;
             batchTilemap = "None";
+            furnitureID = 0;
         }
     }
 
@@ -98,6 +152,7 @@ public class DataManager : MonoBehaviour
         public bool isCleared;
         public string rewardMoney;
         public int rewardAmount;
+        public int questID;
 
         public DailyQuest()
         {
@@ -108,6 +163,7 @@ public class DataManager : MonoBehaviour
             isCleared = false;
             rewardMoney = "ironIngot";
             rewardAmount = 10;
+            questID = 0;
         }
 
         public DailyQuest(string _name, string _description, string _requireItem, int _requireAmount, string _rewardMoney, int _rewardAmount)
@@ -119,6 +175,7 @@ public class DataManager : MonoBehaviour
             rewardMoney = _rewardMoney;
             rewardAmount = _rewardAmount;
             isCleared = false;
+            questID = 0;
         }
     }
 
@@ -132,6 +189,7 @@ public class DataManager : MonoBehaviour
         public bool isCleared;
         public string rewardMoney;
         public int rewardAmount;
+        public int questID;
 
         public WeeklyQuest()
         {
@@ -142,6 +200,7 @@ public class DataManager : MonoBehaviour
             isCleared = false;
             rewardMoney = "ironIngot";
             rewardAmount = 10;
+            questID=0;
         }
 
         public WeeklyQuest(string _name, string _description, string _requireItem, int _requireAmount, string _rewardMoney, int _rewardAmount)
@@ -153,6 +212,7 @@ public class DataManager : MonoBehaviour
             rewardMoney = _rewardMoney;
             rewardAmount = _rewardAmount;
             isCleared = false;
+            questID = 0;
         }
     }
 
@@ -166,6 +226,7 @@ public class DataManager : MonoBehaviour
         public bool isCleared;
         public string rewardMoney;
         public int rewardAmount;
+        public int questID;
 
         public MonthlyQuest()
         {
@@ -176,6 +237,7 @@ public class DataManager : MonoBehaviour
             isCleared = false;
             rewardMoney = "ironIngot";
             rewardAmount = 10;
+            questID = 0;
         }
 
         public MonthlyQuest(string _name, string _description, string _requireItem, int _requireAmount, string _rewardMoney, int _rewardAmount)
@@ -187,6 +249,7 @@ public class DataManager : MonoBehaviour
             rewardMoney = _rewardMoney;
             rewardAmount = _rewardAmount;
             isCleared = false;
+            questID = 0;
         }
     }
 
@@ -196,8 +259,6 @@ public class DataManager : MonoBehaviour
         public DailyQuest[] dailyQuests;
         public WeeklyQuest[] weeklyQuests;
         public MonthlyQuest[] monthlyQuests;
-
-
     }
 
     [Serializable]
@@ -210,6 +271,7 @@ public class DataManager : MonoBehaviour
         public bool isCleared;
         public string rewardMoney;
         public int rewardAmount;
+        public int achiveID;
 
         public moneyAchievement()
         {
@@ -219,6 +281,7 @@ public class DataManager : MonoBehaviour
             requireAmount = 1;
             rewardMoney = "ironIngot";
             rewardAmount = 10;
+            achiveID = 0;
         }
     }
 
@@ -232,6 +295,7 @@ public class DataManager : MonoBehaviour
         public bool isCleared;
         public string rewardMoney;
         public int rewardAmount;
+        public int achiveID;
 
         public furnitureAchievement()
         {
@@ -241,6 +305,7 @@ public class DataManager : MonoBehaviour
             requireAmount = 1;
             rewardMoney = "ironIngot";
             rewardAmount = 10;
+            achiveID = 0;
         }
     }
 
@@ -255,6 +320,7 @@ public class DataManager : MonoBehaviour
         public bool isCleared;
         public string rewardVariable;
         public int[] rewardAmount;
+        public int achiveID;
 
         public levelAchievement()
         {
@@ -266,6 +332,7 @@ public class DataManager : MonoBehaviour
             isCleared = false;
             rewardVariable = "None";
             rewardAmount = new int[] { 1 };
+            achiveID = 0;
         }
     }
 
@@ -334,6 +401,7 @@ public class DataManager : MonoBehaviour
     }
 
     public User user;
+    public NPCContainer npcContainer;
     public Items items;
     public Furnitures furnitures;
     public Quests quests;
@@ -343,6 +411,7 @@ public class DataManager : MonoBehaviour
     void Awake() //set file pathes.
     {
         userFilePath = Application.persistentDataPath + "/user.json";
+        NPCFilePath = Application.persistentDataPath + "/npc.json";
         itemsFilePath = Application.persistentDataPath + "/items.json";
         furnituresFilePath = Application.persistentDataPath + "/furnitures.json";
         questsFilePath = Application.persistentDataPath + "/quests.json";
@@ -356,6 +425,8 @@ public class DataManager : MonoBehaviour
         {
             case "user":
                 SaveUserData(); break;
+            case "npc":
+                SaveNPCData(); break;
             case "items":
                 SaveItemsData(); break;
             case "furnitures":
@@ -373,12 +444,19 @@ public class DataManager : MonoBehaviour
                 break;
         }
         Debug.Log(type + " Saved.");
+        text.text = "Success!";
     }
 
     private void SaveUserData()
     {
         string jsonStr = JsonUtility.ToJson(user, true);
         File.WriteAllText(userFilePath, jsonStr);
+    }
+
+    private void SaveNPCData()
+    {
+        string jsonStr = JsonUtility.ToJson(npcContainer, true);
+        File.WriteAllText(NPCFilePath, jsonStr);
     }
 
     private void SaveItemsData()
@@ -410,6 +488,8 @@ public class DataManager : MonoBehaviour
         {
             case "user":
                 LoadUserData(); break;
+            case "npc":
+                LoadNPCData(); break;
             case "items":
                 LoadItemsData(); break;
             case "furnitures":
@@ -438,6 +518,19 @@ public class DataManager : MonoBehaviour
         {
             string jsonStr = File.ReadAllText(userFilePath);
             user = JsonUtility.FromJson<User>(jsonStr);
+        }
+    }
+
+    private void LoadNPCData()
+    {
+        if (!File.Exists(NPCFilePath))
+        {
+            Debug.Log("Load Failed");
+        }
+        else
+        {
+            string jsonStr = File.ReadAllText(NPCFilePath);
+            npcContainer = JsonUtility.FromJson<NPCContainer>(jsonStr);
         }
     }
 
@@ -516,10 +609,14 @@ public class DataManager : MonoBehaviour
         quests.weeklyQuests = new WeeklyQuest[] { meetPeople, adventrue };
         quests.monthlyQuests = new MonthlyQuest[] { newCities, hiddenNPC };
 
+        //quest Init
+        //string questsJsonStr = File.ReadAllText(Application.dataPath + "/Scripts/Database/JsonData/quests.json");
+        //quests = JsonUtility.FromJson<Quests>(questsJsonStr);
+
         SaveData("items");
         SaveData("furnitures");
         SaveData("quests");
-        //SaveData("user");
+        SaveData("user");
 
         LoadData("user");
         Debug.Log(user.userName);

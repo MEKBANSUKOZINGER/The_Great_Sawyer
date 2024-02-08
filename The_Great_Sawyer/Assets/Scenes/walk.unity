@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf480489cfaea94aa7004e656c3e4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1775539875}
   user:
     userName: 
     birthDay: 0
@@ -177,6 +178,8 @@ MonoBehaviour:
       weeklyQuests: []
       monthlyQuests: []
     clearedQuest: 0
+  npcContainer:
+    questNPCs: []
   items:
     items: []
   furnitures:

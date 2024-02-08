@@ -1,0 +1,62 @@
+{
+    "dailyQuests": [
+        {
+            "name": "할머니 도와드리기",
+            "description": "할머니를 도와 수레를 끌어주세요!",
+            "requireItem": "목장갑",
+            "requireAmount": 2,
+            "isCleared": false,
+            "rewardMoney": "철조각",
+            "rewardAmount": 50
+        },
+        {
+            "name": "열차 정비하기",
+            "description": "열차에 이상은 없는지 점검해주세요!",
+            "requireItem": "스패너",
+            "requireAmount": 1,
+            "isCleared": false,
+            "rewardMoney": "톱니바퀴",
+            "rewardAmount": 10
+        }
+    ],
+    "weeklyQuests": [
+        {
+            "name": "E의 면모 뽐내기",
+            "description": "새로운 NPC를 5명 만나 대화를 나누세요!",
+            "requireItem": "None",
+            "requireAmount": 0,
+            "isCleared": false,
+            "rewardMoney": "톱니바퀴",
+            "rewardAmount": 50
+        },
+        {
+            "name": "나는야 탐험가!",
+            "description": "5일간 프레드와 하루에 한번씩 대화하세요!",
+            "requireItem": "None",
+            "requireAmount": 0,
+            "isCleared": false,
+            "rewardMoney": "철조각",
+            "rewardAmount": 100
+        }
+    ],
+    "monthlyQuests": [
+        {
+            "name": "나는야 개척자!",
+            "description": "다른 도시로 두 번 이상 이동하세요!",
+            "requireItem": "긴급연료",
+            "requireAmount": 50,
+            "isCleared": false,
+            "rewardMoney": "교환권",
+            "rewardAmount": 20
+        },
+        {
+            "name": "...",
+            "description": "숨겨진 NPC와 대화하세요!",
+            "requireItem": "휴대용 램프",
+            "requireAmount": 1,
+            "isCleared": false,
+            "rewardMoney": "철조각",
+            "rewardAmount": 1000
+        }
+    ]
+}
