@@ -7,6 +7,7 @@ using System.Text;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using JetBrains.Annotations;
 
 public class DataManager : MonoBehaviour
 {
@@ -23,48 +24,39 @@ public class DataManager : MonoBehaviour
     private string achievementsFilePath;
 
     //Classes
+
     [Serializable]
-    public class QuestNPC
+    public class NPC
     {
         public string name;
+        public int type;
+        public string[] defaultTalks;
         public string[] giveQuestTalks;
         public string[] beforeCompleteTalks;
         public string[] completeQuestTalks;
         public string[] afterCompleteTalks;
         public int NPCID;
         public int questID;
+        public Vector3Int location;
 
-        public QuestNPC(string _name, int _questID)
+        public NPC(string _name, int _questID)
         {
             name = _name;
+            type = 0;
+            defaultTalks = new string[1];
             giveQuestTalks = new string[1];
             beforeCompleteTalks = new string[1];
             completeQuestTalks = new string[1];
             afterCompleteTalks = new string[1];
             NPCID = 0;
             questID = _questID;
-        }
-    }
-
-    [SerializeField]
-    public class NPC
-    {
-        public string name;
-        public string[] talks;
-        public int NPCID;
-
-        public NPC(string _name)
-        {
-            name = _name;
-            talks = new string[1];
-            NPCID = 0;
+            location = Vector3Int.zero;
         }
     }
 
     [Serializable]
     public class NPCContainer
     {
-        public QuestNPC[] questNPCs;
         public NPC[] NPCs;
     }
 
@@ -416,6 +408,14 @@ public class DataManager : MonoBehaviour
         furnituresFilePath = Application.persistentDataPath + "/furnitures.json";
         questsFilePath = Application.persistentDataPath + "/quests.json";
         achievementsFilePath = Application.persistentDataPath + "/achievements.json";
+
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+        } else
+        {
+            Instance = this;
+        }
     }
 
 
@@ -609,6 +609,12 @@ public class DataManager : MonoBehaviour
         quests.weeklyQuests = new WeeklyQuest[] { meetPeople, adventrue };
         quests.monthlyQuests = new MonthlyQuest[] { newCities, hiddenNPC };
 
+        //NPCs Init
+        NPC testNPC = new NPC("신동준", 1);
+        testNPC.location = new Vector3Int(2, 2, 0);
+        testNPC.defaultTalks = new string[] { "나는 테스트야", "미드 밀리오는 양피지에 Q 4레벨이면 모든게 다 돼.", "으하하하하 칼춤을 시작하자!" };
+        npcContainer.NPCs = new NPC[] { testNPC };
+
         //quest Init
         //string questsJsonStr = File.ReadAllText(Application.dataPath + "/Scripts/Database/JsonData/quests.json");
         //quests = JsonUtility.FromJson<Quests>(questsJsonStr);
@@ -617,8 +623,10 @@ public class DataManager : MonoBehaviour
         SaveData("furnitures");
         SaveData("quests");
         SaveData("user");
+        SaveData("npc");
 
         LoadData("user");
+        LoadData("npc");
         Debug.Log(user.userName);
     }
 }

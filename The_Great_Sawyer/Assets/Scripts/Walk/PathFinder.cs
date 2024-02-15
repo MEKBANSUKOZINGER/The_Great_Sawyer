@@ -36,6 +36,16 @@ public class PathFinder : MonoBehaviour
     Node StartNode, TargetNode, CurNode;
     List<Node> OpenList, ClosedList;
 
+    void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+        } else
+        {
+            Instance = this;
+        }
+    }
 
     public void PathFinding()
     {
@@ -147,7 +157,8 @@ public class PathFinder : MonoBehaviour
                 targetGrid.SetActive(false);
             }
         }
-       tilemap = tilemaps[rand];
+        tilemap = tilemaps[rand];
+        Debug.Log(rand);
         character.transform.position = tilemap.CellToWorld(Vector3Int.zero);
         touchEnabled = true;
     }
