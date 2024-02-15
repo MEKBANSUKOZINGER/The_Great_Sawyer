@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using DG.Tweening;
-using System;
 
 [System.Serializable]
 public class Node
@@ -22,6 +21,9 @@ public class Node
 public class PathFinder : MonoBehaviour
 {
     public static PathFinder Instance;
+
+    public Tilemap[] tilemaps;
+    public int rand;
 
     public Tilemap tilemap;
     public GameObject character;
@@ -136,6 +138,16 @@ public class PathFinder : MonoBehaviour
 
     void Start()
     {
+        int rand = Random.Range(0, tilemaps.Length);
+        for (int i = 0; i < tilemaps.Length; i++)
+        {
+            if (i != rand)
+            {
+                GameObject targetGrid = tilemaps[i].transform.parent.gameObject;
+                targetGrid.SetActive(false);
+            }
+        }
+       tilemap = tilemaps[rand];
         character.transform.position = tilemap.CellToWorld(Vector3Int.zero);
         touchEnabled = true;
     }
@@ -155,7 +167,7 @@ public class PathFinder : MonoBehaviour
                 Debug.Log(FinalNodeList.Count);
                 StartCoroutine(moveCharacter());
             } 
-            catch (IndexOutOfRangeException){
+            catch (System.IndexOutOfRangeException){
                 Debug.Log("out");
             }
             finally

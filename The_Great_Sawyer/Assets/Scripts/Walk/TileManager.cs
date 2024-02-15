@@ -6,16 +6,23 @@ using DG.Tweening;
 
 public class TileManager : MonoBehaviour
 {
-    public Tilemap ground;
-    public Tilemap side;
-    public GameObject cat;
-    // Start is called before the first frame update
+    public static TileManager Instance;
+
+    public Tilemap[] tilemaps;
+    public Tilemap curTilemap;
+    public int rand;
+
     void Start()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        int rand = Random.Range(0, tilemaps.Length);
+        for (int i = 0; i < tilemaps.Length; i++)
+        {
+            if (i != rand)
+            {
+                GameObject targetGrid = tilemaps[i].transform.parent.gameObject;
+                targetGrid.SetActive(false);
+            }
+        }
+        curTilemap = tilemaps[rand];
     }
 }
