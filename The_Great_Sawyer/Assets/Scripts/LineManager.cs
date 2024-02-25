@@ -94,28 +94,28 @@ public class LineManager : MonoBehaviour
             {
                 Vector3 loc = new Vector3(player.transform.position.x + 0.5f, player.transform.position.y, -10);
                 _camera.DOOrthoSize(3, 0.5f).SetEase(Ease.InOutSine);
-                _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
+                if (!isCommunicating) _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
                 Liner(up);
             }
             else if (npcLocation == "down")
             {
                 Vector3 loc = new Vector3(player.transform.position.x - 0.5f, player.transform.position.y, -10);
                 _camera.DOOrthoSize(3, 0.5f).SetEase(Ease.InOutSine);
-                _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
+                if (!isCommunicating) _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
                 Liner(down);
             }
             else if (npcLocation == "left")
             {
                 Vector3 loc = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, -10);
                 _camera.DOOrthoSize(3, 0.5f).SetEase(Ease.InOutSine);
-                _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
+                if (!isCommunicating) _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
                 Liner(left);
             }
             else if (npcLocation == "right")
             {
                 Vector3 loc = new Vector3(player.transform.position.x, player.transform.position.y - 0.5f,-10);
                 _camera.DOOrthoSize(3, 0.5f).SetEase(Ease.InOutSine);
-                _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
+                if (!isCommunicating) _camera.transform.DOMove(loc, 0.5f).SetEase(Ease.InOutSine);
                 Liner(right);
             }
             else
@@ -148,6 +148,7 @@ public class LineManager : MonoBehaviour
             isCommunicating = false;
             scriptStack = 0;
             scriptBox.SetActive(false);
+            _camera.DOOrthoSize(5, 0.5f).SetEase(Ease.InOutSine);
         }
         else
         {
@@ -158,6 +159,7 @@ public class LineManager : MonoBehaviour
 
     void Speak(string script)
             {
+                commuBox.DOText("", 0.01f);
                 commuBox.DOText(script, 1f).OnComplete(() => { endCursor.SetActive(true); });
             }
 }
